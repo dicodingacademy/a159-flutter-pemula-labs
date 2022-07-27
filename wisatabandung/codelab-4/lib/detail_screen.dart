@@ -123,7 +123,7 @@ class DetailMobilePage extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               height: 150,
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -169,7 +169,7 @@ class _DetailWebPageState extends State<DetailWebPage> {
           horizontal: 64,
         ),
         child: Center(
-          child: Container(
+          child: SizedBox(
             width: screenWidth <= 1200 ? 800 : 1200,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -194,7 +194,6 @@ class _DetailWebPageState extends State<DetailWebPage> {
                           ),
                           const SizedBox(height: 16),
                           Scrollbar(
-                            isAlwaysShown: true,
                             controller: _scrollController,
                             child: Container(
                               height: 150,
@@ -225,14 +224,12 @@ class _DetailWebPageState extends State<DetailWebPage> {
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: <Widget>[
-                              Container(
-                                child: Text(
-                                  widget.place.name,
-                                  textAlign: TextAlign.center,
-                                  style: const TextStyle(
-                                    fontSize: 30.0,
-                                    fontFamily: 'Staatliches',
-                                  ),
+                              Text(
+                                widget.place.name,
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                  fontSize: 30.0,
+                                  fontFamily: 'Staatliches',
                                 ),
                               ),
                               Row(
