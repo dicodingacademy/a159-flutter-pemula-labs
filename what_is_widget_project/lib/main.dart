@@ -32,17 +32,16 @@ class MyApp extends StatelessWidget {
 
         /// Parameter [body] untuk menampilkan konten utama pada badan [Scaffold].
         /// Kamu bisa mengubah isi konten aplikasi pada parameter ini.
-        /// 
-        /// Sebagian besar widget memiliki parameter [child], salah satunya adalah widget [Center]. 
-        /// Widget tersebut dianggap sebagai parent-widget, sedangkan widget pada parameter [child] 
-        /// dianggap sebagai child-widget. 
+        ///
+        /// Sebagian besar widget memiliki parameter [child], salah satunya adalah widget [Center].
+        /// Widget tersebut dianggap sebagai parent-widget, sedangkan widget pada parameter [child]
+        /// dianggap sebagai child-widget.
         body: const Center(
-
-          /// Parameter [child] ini adalah sebuah "anak" dari widget [Center]. Kamu bisa memberikan 
+          /// Parameter [child] ini adalah sebuah "anak" dari widget [Center]. Kamu bisa memberikan
           /// satu widget apapun di dalamnya.
-          /// 
-          /// Berbeda jika ada widget yang memiliki parameter [children]. Parameter tersebut dapat 
-          /// kamu tambahkan dengan banyak anak. Kamu bisa temu pada widhet Row, Column, ListView, 
+          ///
+          /// Berbeda dengan widget yang memiliki parameter [children]. Parameter tersebut dapat
+          /// kamu tambahkan dengan banyak "anak". Kamu bisa temui pada widget Row, Column, ListView,
           /// dan masih banyak lainnya.
           child: Text('Hello, world!'),
         ),

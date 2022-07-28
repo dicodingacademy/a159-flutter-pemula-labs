@@ -56,7 +56,7 @@ class Heading extends StatelessWidget {
 /// akan membuatkan struktur [StatefulWidget] secara otomatis.
 class BiggerText extends StatefulWidget {
   /// Parameter [text] adalah parameter dari widget [BiggerText].
-  /// Parameter ini tidak wajib ada, kamu bisa sesuaikan dengan kebutuhan widget yang 
+  /// Parameter ini tidak wajib ada, kamu bisa sesuaikan dengan kebutuhan widget yang
   /// kamu inginkan.
   final String text;
 
@@ -65,13 +65,13 @@ class BiggerText extends StatefulWidget {
     required this.text,
   }) : super(key: key);
 
-  /// Berbeda dengan [StatelessWidget], widget [BiggerText] akan mengembalikan "state" 
+  /// Berbeda dengan [StatelessWidget], widget [BiggerText] akan mengembalikan "state"
   /// dari widget [_BiggerTextState], bukan hanya sebuah widget.
   @override
   State<BiggerText> createState() => _BiggerTextState();
 }
 
-/// Kelas [_BiggerTextState] adalah turunan dari state widget [BiggerText]. 
+/// Kelas [_BiggerTextState] adalah turunan dari state widget [BiggerText].
 class _BiggerTextState extends State<BiggerText> {
   /// Sedangkan parameter [_textSize] adalah state dari widget [BiggerText].
   double _textSize = 16.0;
@@ -88,10 +88,11 @@ class _BiggerTextState extends State<BiggerText> {
         ElevatedButton(
           child: const Text("Perbesar"),
           onPressed: () {
-            /// Fungsi [setState] akan mengubah nilai state [_textSize]. Selain itu, 
-            /// fungsi [setState] akan memuat ulang widget keseluruhan sehingga tampilan 
+            /// Fungsi [setState] akan mengubah nilai state [_textSize]. Selain itu,
+            /// fungsi [setState] akan memuat ulang widget keseluruhan sehingga tampilan
             /// teks berubah.
             setState(() {
+              /// ukuran teks diubah menjadi 32
               _textSize = 32.0;
             });
           },
