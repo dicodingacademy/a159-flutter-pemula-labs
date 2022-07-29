@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
       ),
 
       /// Kamu bisa ganti widget-nya sesuai keinginan.
-      home: const ExpandedFlexibleWidget(),
-      // home: const RainbowWidget(),
+      // home: const ExpandedFlexibleWidget(),
+      home: const RainbowWidget(),
     );
   }
 }

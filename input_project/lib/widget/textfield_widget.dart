@@ -23,10 +23,15 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
       children: [
         TextField(
           controller: _controller,
-          onChanged: (String? value) {
+          decoration: const InputDecoration(
+            hintText: 'Write your name here...',
+            labelText: 'Your Name',
+          ),
+          onChanged: (String value) {
             print("Updated : $value");
           },
         ),
+        const SizedBox(height: 20),
         ElevatedButton(
           child: const Text('Submit'),
           onPressed: () {
