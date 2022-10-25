@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
 
       /// Kamu bisa ganti widget-nya sesuai keinginan.
       // home: const RowWidget(),
-      home: const ColumnWidget(),
+      home: const ColumnWidget(key),
     );
   }
 }
