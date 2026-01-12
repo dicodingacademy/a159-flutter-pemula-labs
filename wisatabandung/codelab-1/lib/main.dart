@@ -30,38 +30,35 @@ class DetailScreen extends StatelessWidget {
               child: const Text(
                 'Farm House Lembang',
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
               ),
             ),
             Container(
               margin: const EdgeInsets.symmetric(vertical: 16.0),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Column(
-                    children: const <Widget>[
+                    children: <Widget>[
                       Icon(Icons.calendar_today),
                       SizedBox(height: 8.0),
                       Text('Open Everyday'),
                     ],
                   ),
                   Column(
-                    children: const <Widget>[
+                    children: <Widget>[
                       Icon(Icons.access_time),
                       SizedBox(height: 8.0),
-                      Text('09:00 - 20:00')
+                      Text('09:00 - 20:00'),
                     ],
                   ),
                   Column(
-                    children: const <Widget>[
+                    children: <Widget>[
                       Icon(Icons.monetization_on),
                       SizedBox(height: 8.0),
                       Text('Rp 25.000'),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
@@ -72,7 +69,7 @@ class DetailScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16.0),
               ),
-            )
+            ),
           ],
         ),
       ),

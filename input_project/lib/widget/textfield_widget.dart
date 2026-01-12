@@ -9,7 +9,6 @@ class TextFieldWidget extends StatefulWidget {
 
 class _TextFieldWidgetState extends State<TextFieldWidget> {
   final TextEditingController _controller = TextEditingController();
-  String? _name = '';
 
   @override
   void dispose() {
@@ -28,7 +27,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
             labelText: 'Your Name',
           ),
           onChanged: (String value) {
-            print("Updated : $value");
+            debugPrint("Updated : $value");
           },
         ),
         const SizedBox(height: 20),
@@ -38,13 +37,11 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
             showDialog(
               context: context,
               builder: (context) {
-                return AlertDialog(
-                  content: Text('Hello, ${_controller.text}'),
-                );
+                return AlertDialog(content: Text('Hello, ${_controller.text}'));
               },
             );
           },
-        )
+        ),
       ],
     );
   }

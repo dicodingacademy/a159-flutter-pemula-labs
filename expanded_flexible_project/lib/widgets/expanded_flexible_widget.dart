@@ -5,35 +5,15 @@ class ExpandedFlexibleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Row(
-                children: const [
-                  ExpandedWidget(),
-                  FlexibleWidget(),
-                ],
-              ),
-              Row(
-                children: const [
-                  ExpandedWidget(),
-                  ExpandedWidget(),
-                ],
-              ),
-              Row(
-                children: const [
-                  FlexibleWidget(),
-                  FlexibleWidget(),
-                ],
-              ),
-              Row(
-                children: const [
-                  FlexibleWidget(),
-                  ExpandedWidget(),
-                ],
-              ),
+              Row(children: [ExpandedWidget(), FlexibleWidget()]),
+              Row(children: [ExpandedWidget(), ExpandedWidget()]),
+              Row(children: [FlexibleWidget(), FlexibleWidget()]),
+              Row(children: [FlexibleWidget(), ExpandedWidget()]),
             ],
           ),
         ),
@@ -57,10 +37,7 @@ class ExpandedWidget extends StatelessWidget {
           padding: EdgeInsets.all(16.0),
           child: Text(
             'Expanded',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-            ),
+            style: TextStyle(color: Colors.white, fontSize: 24),
           ),
         ),
       ),
@@ -83,10 +60,7 @@ class FlexibleWidget extends StatelessWidget {
           padding: EdgeInsets.all(16.0),
           child: Text(
             'Flexible',
-            style: TextStyle(
-              color: Colors.teal,
-              fontSize: 24,
-            ),
+            style: TextStyle(color: Colors.teal, fontSize: 24),
           ),
         ),
       ),
