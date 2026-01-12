@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ExpandedFlexibleWidget extends StatelessWidget {
-  const ExpandedFlexibleWidget({Key? key}) : super(key: key);
+  const ExpandedFlexibleWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class ExpandedFlexibleWidget extends StatelessWidget {
 }
 
 class ExpandedWidget extends StatelessWidget {
-  const ExpandedWidget({Key? key}) : super(key: key);
+  const ExpandedWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class ExpandedWidget extends StatelessWidget {
 }
 
 class FlexibleWidget extends StatelessWidget {
-  const FlexibleWidget({Key? key}) : super(key: key);
+  const FlexibleWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

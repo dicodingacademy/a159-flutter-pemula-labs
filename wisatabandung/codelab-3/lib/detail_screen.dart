@@ -6,7 +6,7 @@ var informationTextStyle = const TextStyle(fontFamily: 'Oxygen');
 class DetailScreen extends StatelessWidget {
   final TourismPlace place;
 
-  const DetailScreen({Key? key, required this.place}) : super(key: key);
+  const DetailScreen({super.key, required this.place});
 
   @override
   Widget build(BuildContext context) {
@@ -63,30 +63,21 @@ class DetailScreen extends StatelessWidget {
                     children: <Widget>[
                       const Icon(Icons.calendar_today),
                       const SizedBox(height: 8.0),
-                      Text(
-                        place.openDays,
-                        style: informationTextStyle,
-                      ),
+                      Text(place.openDays, style: informationTextStyle),
                     ],
                   ),
                   Column(
                     children: <Widget>[
                       const Icon(Icons.access_time),
                       const SizedBox(height: 8.0),
-                      Text(
-                        place.openTime,
-                        style: informationTextStyle,
-                      ),
+                      Text(place.openTime, style: informationTextStyle),
                     ],
                   ),
                   Column(
                     children: <Widget>[
                       const Icon(Icons.monetization_on),
                       const SizedBox(height: 8.0),
-                      Text(
-                        place.ticketPrice,
-                        style: informationTextStyle,
-                      ),
+                      Text(place.ticketPrice, style: informationTextStyle),
                     ],
                   ),
                 ],
@@ -97,10 +88,7 @@ class DetailScreen extends StatelessWidget {
               child: Text(
                 place.description,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 16.0,
-                  fontFamily: 'Oxygen',
-                ),
+                style: const TextStyle(fontSize: 16.0, fontFamily: 'Oxygen'),
               ),
             ),
             SizedBox(
@@ -126,7 +114,7 @@ class DetailScreen extends StatelessWidget {
 }
 
 class FavoriteButton extends StatefulWidget {
-  const FavoriteButton({Key? key}) : super(key: key);
+  const FavoriteButton({super.key});
 
   @override
   _FavoriteButtonState createState() => _FavoriteButtonState();

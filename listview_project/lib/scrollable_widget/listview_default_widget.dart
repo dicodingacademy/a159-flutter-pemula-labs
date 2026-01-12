@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ListViewDefaultWidget extends StatelessWidget {
-  const ListViewDefaultWidget({Key? key}) : super(key: key);
+  const ListViewDefaultWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
+    return Scaffold(
       body: ListView(
         children: <Widget>[
           Container(
@@ -15,10 +15,7 @@ class ListViewDefaultWidget extends StatelessWidget {
               border: Border.all(color: Colors.black),
             ),
             child: const Center(
-              child: Text(
-                '1',
-                style: TextStyle(fontSize: 50),
-              ),
+              child: Text('1', style: TextStyle(fontSize: 50)),
             ),
           ),
           Container(
@@ -28,10 +25,7 @@ class ListViewDefaultWidget extends StatelessWidget {
               border: Border.all(color: Colors.black),
             ),
             child: const Center(
-              child: Text(
-                '2',
-                style: TextStyle(fontSize: 50),
-              ),
+              child: Text('2', style: TextStyle(fontSize: 50)),
             ),
           ),
           Container(
@@ -41,10 +35,7 @@ class ListViewDefaultWidget extends StatelessWidget {
               border: Border.all(color: Colors.black),
             ),
             child: const Center(
-              child: Text(
-                '3',
-                style: TextStyle(fontSize: 50),
-              ),
+              child: Text('3', style: TextStyle(fontSize: 50)),
             ),
           ),
           Container(
@@ -54,10 +45,7 @@ class ListViewDefaultWidget extends StatelessWidget {
               border: Border.all(color: Colors.black),
             ),
             child: const Center(
-              child: Text(
-                '4',
-                style: TextStyle(fontSize: 50),
-              ),
+              child: Text('4', style: TextStyle(fontSize: 50)),
             ),
           ),
         ],

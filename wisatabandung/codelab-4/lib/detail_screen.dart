@@ -7,7 +7,7 @@ var informationTextStyle = const TextStyle(fontFamily: 'Oxygen');
 class DetailScreen extends StatelessWidget {
   final TourismPlace place;
 
-  const DetailScreen({Key? key, required this.place}) : super(key: key);
+  const DetailScreen({super.key, required this.place});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class DetailScreen extends StatelessWidget {
 class DetailMobilePage extends StatelessWidget {
   final TourismPlace place;
 
-  const DetailMobilePage({Key? key, required this.place}) : super(key: key);
+  const DetailMobilePage({super.key, required this.place});
 
   @override
   Widget build(BuildContext context) {
@@ -83,30 +83,21 @@ class DetailMobilePage extends StatelessWidget {
                     children: <Widget>[
                       const Icon(Icons.calendar_today),
                       const SizedBox(height: 8.0),
-                      Text(
-                        place.openDays,
-                        style: informationTextStyle,
-                      ),
+                      Text(place.openDays, style: informationTextStyle),
                     ],
                   ),
                   Column(
                     children: <Widget>[
                       const Icon(Icons.access_time),
                       const SizedBox(height: 8.0),
-                      Text(
-                        place.openTime,
-                        style: informationTextStyle,
-                      ),
+                      Text(place.openTime, style: informationTextStyle),
                     ],
                   ),
                   Column(
                     children: <Widget>[
                       const Icon(Icons.monetization_on),
                       const SizedBox(height: 8.0),
-                      Text(
-                        place.ticketPrice,
-                        style: informationTextStyle,
-                      ),
+                      Text(place.ticketPrice, style: informationTextStyle),
                     ],
                   ),
                 ],
@@ -117,10 +108,7 @@ class DetailMobilePage extends StatelessWidget {
               child: Text(
                 place.description,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 16.0,
-                  fontFamily: 'Oxygen',
-                ),
+                style: const TextStyle(fontSize: 16.0, fontFamily: 'Oxygen'),
               ),
             ),
             SizedBox(
@@ -148,7 +136,7 @@ class DetailMobilePage extends StatelessWidget {
 class DetailWebPage extends StatefulWidget {
   final TourismPlace place;
 
-  const DetailWebPage({Key? key, required this.place}) : super(key: key);
+  const DetailWebPage({super.key, required this.place});
 
   @override
   _DetailWebPageState createState() => _DetailWebPageState();
@@ -164,10 +152,7 @@ class _DetailWebPageState extends State<DetailWebPage> {
     return Scaffold(
       appBar: kIsWeb ? null : AppBar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: 16,
-          horizontal: 64,
-        ),
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 64),
         child: Center(
           child: SizedBox(
             width: screenWidth <= 1200 ? 800 : 1200,
@@ -176,10 +161,7 @@ class _DetailWebPageState extends State<DetailWebPage> {
               children: <Widget>[
                 const Text(
                   'Wisata Bandung',
-                  style: TextStyle(
-                    fontFamily: 'Staatliches',
-                    fontSize: 32,
-                  ),
+                  style: TextStyle(fontFamily: 'Staatliches', fontSize: 32),
                 ),
                 const SizedBox(height: 32),
                 Row(
@@ -271,7 +253,9 @@ class _DetailWebPageState extends State<DetailWebPage> {
                                 ],
                               ),
                               Container(
-                                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 16.0,
+                                ),
                                 child: Text(
                                   widget.place.description,
                                   textAlign: TextAlign.justify,
@@ -304,7 +288,7 @@ class _DetailWebPageState extends State<DetailWebPage> {
 }
 
 class FavoriteButton extends StatefulWidget {
-  const FavoriteButton({Key? key}) : super(key: key);
+  const FavoriteButton({super.key});
 
   @override
   _FavoriteButtonState createState() => _FavoriteButtonState();

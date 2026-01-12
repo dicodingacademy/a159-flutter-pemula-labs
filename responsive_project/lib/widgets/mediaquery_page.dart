@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 
 class MediaQueryPage extends StatelessWidget {
-  const MediaQueryPage({Key? key}) : super(key: key);
+  const MediaQueryPage({super.key});
 
   @override
   Widget build(BuildContext context) {

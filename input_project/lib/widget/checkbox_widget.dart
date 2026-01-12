@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CheckboxWidget extends StatefulWidget {
-  const CheckboxWidget({Key? key}) : super(key: key);
+  const CheckboxWidget({super.key});
 
   @override
   State<CheckboxWidget> createState() => _CheckboxWidgetState();

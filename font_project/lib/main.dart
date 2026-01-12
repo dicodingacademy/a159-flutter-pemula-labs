@@ -5,7 +5,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,14 +24,12 @@ class MyApp extends StatelessWidget {
 }
 
 class FirstScreen extends StatelessWidget {
-  const FirstScreen({Key? key}) : super(key: key);
+  const FirstScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('First Screen'),
-      ),
+      appBar: AppBar(title: const Text('First Screen')),
       body: const Center(
         child: Text(
           'Custom Font',

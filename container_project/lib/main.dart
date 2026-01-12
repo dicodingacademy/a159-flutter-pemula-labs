@@ -5,29 +5,25 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: const FirstScreen(),
     );
   }
 }
 
 class FirstScreen extends StatelessWidget {
-  const FirstScreen({Key? key}) : super(key: key);
+  const FirstScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('First Screen'),
-      ),
+      appBar: AppBar(title: const Text('First Screen')),
       body: Container(
         /// Kamu bisa beri warna background pada [Container]
         /// dengan parameter [color]. Akan tetapi, jika [Container]
@@ -66,10 +62,7 @@ class FirstScreen extends StatelessWidget {
 
         /// Teks 'Hi' akan dibungkus dengan [Container] dengan variasi
         /// bentuk, styling dan layout.
-        child: const Text(
-          'Hi',
-          style: TextStyle(fontSize: 40),
-        ),
+        child: const Text('Hi', style: TextStyle(fontSize: 40)),
       ),
     );
   }

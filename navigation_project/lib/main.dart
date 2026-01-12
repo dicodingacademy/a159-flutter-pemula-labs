@@ -5,38 +5,39 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: const FirstScreen(),
     );
   }
 }
 
 class FirstScreen extends StatelessWidget {
-  const FirstScreen({Key? key}) : super(key: key);
+  const FirstScreen({super.key});
 
   final String message = 'Hello from First Screen!';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('First Screen'),
-      ),
+      appBar: AppBar(title: const Text('First Screen')),
       body: Center(
         child: ElevatedButton(
           child: const Text("Pindah Screen"),
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return SecondScreen(message);
-            }));
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return SecondScreen(message);
+                },
+              ),
+            );
           },
         ),
       ),
@@ -47,14 +48,12 @@ class FirstScreen extends StatelessWidget {
 class SecondScreen extends StatelessWidget {
   final String message;
 
-  const SecondScreen(this.message, {Key? key}) : super(key: key);
+  const SecondScreen(this.message, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Second Screen'),
-      ),
+      appBar: AppBar(title: const Text('Second Screen')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

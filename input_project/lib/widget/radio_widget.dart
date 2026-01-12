@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RadioWidget extends StatefulWidget {
-  const RadioWidget({Key? key}) : super(key: key);
+  const RadioWidget({super.key});
 
   @override
   State<RadioWidget> createState() => _RadioWidgetState();

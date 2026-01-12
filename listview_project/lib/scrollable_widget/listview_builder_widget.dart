@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ListViewBuilderWidget extends StatelessWidget {
-  const ListViewBuilderWidget({Key? key}) : super(key: key);
+  const ListViewBuilderWidget({super.key});
   final List<int> numberList = const <int>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   @override

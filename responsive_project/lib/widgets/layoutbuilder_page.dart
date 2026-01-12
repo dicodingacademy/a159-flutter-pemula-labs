@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LayoutBuilderPage extends StatelessWidget {
-  const LayoutBuilderPage({Key? key}) : super(key: key);
+  const LayoutBuilderPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +25,7 @@ class LayoutBuilderPage extends StatelessWidget {
                     ),
                     Text(
                       'LayoutBuilder: ${constraints.maxWidth}',
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                      ),
+                      style: const TextStyle(color: Colors.white, fontSize: 18),
                       textAlign: TextAlign.center,
                     ),
                   ],

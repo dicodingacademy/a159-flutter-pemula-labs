@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ResponsivePage extends StatelessWidget {
-  const ResponsivePage({Key? key}) : super(key: key);
+  const ResponsivePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,9 +10,7 @@ class ResponsivePage extends StatelessWidget {
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
           if (constraints.maxWidth < 600) {
-            return ListView(
-              children: _generateContainers(),
-            );
+            return ListView(children: _generateContainers());
           } else if (constraints.maxWidth < 900) {
             return GridView.count(
               crossAxisCount: 2,

@@ -3,21 +3,17 @@ import 'package:flutter/material.dart';
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: const Scaffold(
         body: Center(
           /// mengubah widget Text dengan widget [Heading] atau [BiggetText].
-          child: Text(
-            "Hello world!",
-          ),
+          child: Text("Hello world!"),
         ),
       ),
     );
@@ -34,19 +30,13 @@ class Heading extends StatelessWidget {
   /// State [text] dilewatkan pada constructor class. Selain itu, terdapat parameter
   /// [key] sebagai tanda pengenal untuk widget [Heading]. [Key] selalu ada agar
   /// widget memiliki identitas yang berbeda dengan penggunaan widget lainnya.
-  const Heading({
-    Key? key,
-    required this.text,
-  }) : super(key: key);
+  const Heading({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: const TextStyle(
-        fontSize: 24.0,
-        fontWeight: FontWeight.bold,
-      ),
+      style: const TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
     );
   }
 }
@@ -60,10 +50,7 @@ class BiggerText extends StatefulWidget {
   /// kamu inginkan.
   final String text;
 
-  const BiggerText({
-    Key? key,
-    required this.text,
-  }) : super(key: key);
+  const BiggerText({super.key, required this.text});
 
   /// Berbeda dengan [StatelessWidget], widget [BiggerText] akan mengembalikan "state"
   /// dari widget [_BiggerTextState], bukan hanya sebuah widget.
@@ -81,10 +68,7 @@ class _BiggerTextState extends State<BiggerText> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Text(
-          widget.text,
-          style: TextStyle(fontSize: _textSize),
-        ),
+        Text(widget.text, style: TextStyle(fontSize: _textSize)),
         ElevatedButton(
           child: const Text("Perbesar"),
           onPressed: () {
@@ -96,7 +80,7 @@ class _BiggerTextState extends State<BiggerText> {
               _textSize = 32.0;
             });
           },
-        )
+        ),
       ],
     );
   }
