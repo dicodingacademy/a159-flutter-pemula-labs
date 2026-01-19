@@ -76,8 +76,8 @@ class _BiggerTextState extends State<BiggerText> {
             /// fungsi [setState] akan memuat ulang widget keseluruhan sehingga tampilan
             /// teks berubah.
             setState(() {
-              /// ukuran teks diubah menjadi 32
-              _textSize = 32.0;
+              /// ukuran teks ditambah 6.0 setiap kali tombol ditekan
+              _textSize = _textSize + 6.0;
             });
           },
         ),
