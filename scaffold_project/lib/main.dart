@@ -38,22 +38,17 @@ class FirstScreen extends StatelessWidget {
       /// bagian atas [Scaffold].
       appBar: AppBar(
         title: const Text('First Screen'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
 
         /// Parameter [actions] berisi kumpulan widget yang akan tampil pada
         /// kanan [AppBar]. Kamu bisa tambahkan menu [Icon] atau semacamnya.
         actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.search, color: Colors.white),
-            onPressed: () {},
-          ),
+          IconButton(icon: const Icon(Icons.search), onPressed: () {}),
         ],
 
         /// Parameter [leading] dapat kamu isi dengan widget yang akan tampil
         /// pada kiri [AppBar]. Kamu bisa tambahkan [Icon] atau semacamnya.
-        leading: IconButton(
-          icon: const Icon(Icons.menu, color: Colors.white),
-          onPressed: () {},
-        ),
+        leading: IconButton(icon: const Icon(Icons.menu), onPressed: () {}),
       ),
 
       /// Parameter [body] dapat kamu isi dengan konten aplikasi.
