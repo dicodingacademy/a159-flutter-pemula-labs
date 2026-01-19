@@ -18,7 +18,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
 
       /// Tema aplikasi Flutter dideklarasikan pada parameter [theme]
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
 
       /// Parameter [home] adalah rute pertama yang akan dijalankan,
       /// sedangkan widget [Scaffold] adalah tampilan dasar Material Design.

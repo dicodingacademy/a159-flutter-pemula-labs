@@ -11,7 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
 
       /// Tambahkan keyword [const] yang menandakan bahwa widget bernilai
       /// konstan dan tidak berubah. Hal ini berlaku pada seluruh widget

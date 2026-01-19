@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
 
         /// Penambahan parameter [fontFamily] pada [ThemeData] akan mengubah
         /// font-family seluruh teks yang ada di dalam aplikasi.
