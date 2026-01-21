@@ -25,11 +25,14 @@ class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('First Screen')),
+      appBar: AppBar(
+        title: const Text('First Screen'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      ),
 
       /// Widget Center digunakan untuk membuat suatu widget
       /// berada pada posisi tengah.
-      body: const Center(child: Text('Text berada di tengah')),
+      body: const Center(child: Text("Selamat Datang di Aplikasi Saya")),
     );
   }
 }
