@@ -25,7 +25,10 @@ class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('First Screen')),
+      appBar: AppBar(
+        title: const Text('First Screen'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      ),
 
       /// Kamu bisa gunakan widget [Container] untuk membuat
       /// [padding]. Akan tetapi, widget [Container] ini merupakan
