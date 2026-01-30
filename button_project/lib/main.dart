@@ -34,6 +34,7 @@ class _FirstScreenState extends State<FirstScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('First Screen'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: Center(
         child: Column(
@@ -42,7 +43,15 @@ class _FirstScreenState extends State<FirstScreen> {
           children: <Widget>[
             /// Elevated Button
             ElevatedButton(
-              child: const Text("Tombol"),
+              child: const Text("Elevated Button"),
+              onPressed: () {
+                // Aksi ketika button diklik
+              },
+            ),
+
+            /// FilledButton Button
+            FilledButton(
+              child: const Text("Filled Button"),
               onPressed: () {
                 // Aksi ketika button diklik
               },
@@ -76,18 +85,12 @@ class _FirstScreenState extends State<FirstScreen> {
             /// Dropdown Button
             DropdownButton<String>(
               items: const <DropdownMenuItem<String>>[
-                DropdownMenuItem<String>(
-                  value: 'Dart',
-                  child: Text('Dart'),
-                ),
+                DropdownMenuItem<String>(value: 'Dart', child: Text('Dart')),
                 DropdownMenuItem<String>(
                   value: 'Kotlin',
                   child: Text('Kotlin'),
                 ),
-                DropdownMenuItem<String>(
-                  value: 'Swift',
-                  child: Text('Swift'),
-                ),
+                DropdownMenuItem<String>(value: 'Swift', child: Text('Swift')),
               ],
               value: language,
               hint: const Text('Select Language'),
