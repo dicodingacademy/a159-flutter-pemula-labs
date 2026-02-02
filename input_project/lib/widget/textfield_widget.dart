@@ -22,6 +22,8 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
       children: [
         TextField(
           controller: _controller,
+          keyboardType: TextInputType.text,
+          obscureText: false,
           decoration: const InputDecoration(
             hintText: 'Write your name here...',
             labelText: 'Your Name',

@@ -8,27 +8,21 @@ class SwitchWidget extends StatefulWidget {
 }
 
 class _SwitchWidgetState extends State<SwitchWidget> {
-  bool lightOn = false;
+  bool isLightMode = true;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Switch(
-        value: lightOn,
+      title: Text(isLightMode ? 'Light Mode' : 'Dark Mode'),
+      leading: Icon(isLightMode ? Icons.wb_sunny : Icons.nights_stay),
+      trailing: Switch(
+        value: isLightMode,
         onChanged: (bool value) {
           setState(() {
-            lightOn = value;
+            isLightMode = value;
           });
-
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text(lightOn ? 'Light On' : 'Light Off'),
-              duration: const Duration(seconds: 1),
-            ),
-          );
         },
       ),
-      title: Text(lightOn ? "Turn Off" : "Turn On"),
     );
   }
 }
