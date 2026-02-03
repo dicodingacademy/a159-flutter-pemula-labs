@@ -36,7 +36,7 @@ class FirstScreen extends StatelessWidget {
               height: 200,
             ),
             const SizedBox(height: 30),
-            Image.asset("images/android.png", width: 200, height: 200),
+            Image.asset("assets/images/android.png", width: 200, height: 200),
           ],
         ),
       ),
