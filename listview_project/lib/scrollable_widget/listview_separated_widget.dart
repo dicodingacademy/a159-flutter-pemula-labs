@@ -2,31 +2,23 @@ import 'package:flutter/material.dart';
 
 class ListViewSeparatedWidget extends StatelessWidget {
   const ListViewSeparatedWidget({super.key});
-  final List<int> numberList = const <int>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView.separated(
-        itemCount: numberList.length,
-        itemBuilder: (BuildContext context, int index) {
-          return Container(
-            height: 250,
-            decoration: BoxDecoration(
-              color: Colors.grey,
-              border: Border.all(color: Colors.black),
-            ),
-            child: Center(
-              child: Text(
-                '${numberList[index]}',
-                style: const TextStyle(fontSize: 50),
-              ),
-            ),
-          );
-        },
-        separatorBuilder: (BuildContext context, int index) {
-          return const Divider();
-        },
+        itemCount: 50,
+        // 1. Membangun konten utama
+        itemBuilder: (context, index) => ListTile(
+          title: Text("Berita Hari Ini #$index"),
+          leading: Icon(Icons.article),
+        ),
+        // 2. Membangun pemisah di antara item (tapi tidak di paling atas/bawah)
+        separatorBuilder: (context, index) => Divider(
+          height: 1,
+          color: Colors.grey[300],
+          indent: 50, // Memberikan jarak agar garis tidak menabrak ikon leading
+        ),
       ),
     );
   }
