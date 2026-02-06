@@ -5,30 +5,42 @@ class LayoutBuilderPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
+    final screenWidth = size.width;
 
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
       body: Row(
         children: [
           Expanded(
             child: LayoutBuilder(
-              builder: (BuildContext context, BoxConstraints constraints) {
-                return Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Text(
-                      'MediaQuery: ${screenSize.width.toStringAsFixed(2)}',
-                      style: const TextStyle(color: Colors.white, fontSize: 18),
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      'LayoutBuilder: ${constraints.maxWidth}',
-                      style: const TextStyle(color: Colors.white, fontSize: 18),
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
+              builder: (context, constraints) {
+                final constraintsWidth = constraints.maxWidth.toStringAsFixed(
+                  0,
+                );
+                return ColoredBox(
+                  color: Colors.blueGrey,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Text(
+                        'MediaQuery: $screenWidth',
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      Text(
+                        'LayoutBuilder: $constraintsWidth',
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
                 );
               },
             ),
@@ -36,15 +48,18 @@ class LayoutBuilderPage extends StatelessWidget {
           Expanded(
             flex: 3,
             child: LayoutBuilder(
-              builder: (BuildContext context, BoxConstraints constraints) {
-                return Container(
+              builder: (context, constraints) {
+                final constraintsWidth = constraints.maxWidth.toStringAsFixed(
+                  0,
+                );
+                return ColoredBox(
                   color: Colors.white,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Text(
-                        'MediaQuery: ${screenSize.width.toStringAsFixed(2)}',
+                        'MediaQuery: $screenWidth',
                         style: const TextStyle(
                           color: Colors.blueGrey,
                           fontSize: 18,
@@ -52,7 +67,7 @@ class LayoutBuilderPage extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ),
                       Text(
-                        'LayoutBuilder: ${constraints.maxWidth}',
+                        'LayoutBuilder: $constraintsWidth',
                         style: const TextStyle(
                           color: Colors.blueGrey,
                           fontSize: 18,
