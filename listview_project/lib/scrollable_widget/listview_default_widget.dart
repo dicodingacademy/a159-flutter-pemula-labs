@@ -1,65 +1,26 @@
 import 'package:flutter/material.dart';
 
 class ListViewDefaultWidget extends StatelessWidget {
-  const ListViewDefaultWidget({Key? key}) : super(key: key);
+  const ListViewDefaultWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
+    return Scaffold(
       body: ListView(
         children: <Widget>[
-          Container(
-            height: 250,
-            decoration: BoxDecoration(
-              color: Colors.grey,
-              border: Border.all(color: Colors.black),
-            ),
-            child: const Center(
-              child: Text(
-                '1',
-                style: TextStyle(fontSize: 50),
-              ),
-            ),
+          ListTile(
+            leading: Icon(Icons.settings, color: Colors.blue),
+            title: Text("Pengaturan Profil"),
+            trailing: Icon(Icons.chevron_right),
+            onTap: () => debugPrint("Klik Profil"),
           ),
-          Container(
-            height: 250,
-            decoration: BoxDecoration(
-              color: Colors.grey,
-              border: Border.all(color: Colors.black),
-            ),
-            child: const Center(
-              child: Text(
-                '2',
-                style: TextStyle(fontSize: 50),
-              ),
-            ),
+          ListTile(
+            leading: Icon(Icons.notifications, color: Colors.red),
+            title: Text("Notifikasi"),
+            trailing: Icon(Icons.chevron_right),
+            onTap: () => debugPrint("Klik Notifikasi"),
           ),
-          Container(
-            height: 250,
-            decoration: BoxDecoration(
-              color: Colors.grey,
-              border: Border.all(color: Colors.black),
-            ),
-            child: const Center(
-              child: Text(
-                '3',
-                style: TextStyle(fontSize: 50),
-              ),
-            ),
-          ),
-          Container(
-            height: 250,
-            decoration: BoxDecoration(
-              color: Colors.grey,
-              border: Border.all(color: Colors.black),
-            ),
-            child: const Center(
-              child: Text(
-                '4',
-                style: TextStyle(fontSize: 50),
-              ),
-            ),
-          ),
+          // Anda bisa menambah widget lain seperti Image atau Container di sini
         ],
       ),
     );

@@ -5,14 +5,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
 
       /// Tambahkan keyword [const] yang menandakan bahwa widget bernilai
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
 }
 
 class FirstScreen extends StatelessWidget {
-  const FirstScreen({Key? key}) : super(key: key);
+  const FirstScreen({super.key});
 
   /// [Scaffold] merupakan sebuah widget yang digunakan untuk membuat tampilan
   /// dasar material design pada aplikasi Flutter. Biasanya dapat disebut
@@ -38,34 +38,21 @@ class FirstScreen extends StatelessWidget {
       /// bagian atas [Scaffold].
       appBar: AppBar(
         title: const Text('First Screen'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
 
         /// Parameter [actions] berisi kumpulan widget yang akan tampil pada
         /// kanan [AppBar]. Kamu bisa tambahkan menu [Icon] atau semacamnya.
         actions: <Widget>[
-          IconButton(
-            icon: const Icon(
-              Icons.search,
-              color: Colors.white,
-            ),
-            onPressed: () {},
-          ),
+          IconButton(icon: const Icon(Icons.search), onPressed: () {}),
         ],
 
         /// Parameter [leading] dapat kamu isi dengan widget yang akan tampil
         /// pada kiri [AppBar]. Kamu bisa tambahkan [Icon] atau semacamnya.
-        leading: IconButton(
-          icon: const Icon(
-            Icons.menu,
-            color: Colors.white,
-          ),
-          onPressed: () {},
-        ),
+        leading: IconButton(icon: const Icon(Icons.menu), onPressed: () {}),
       ),
 
       /// Parameter [body] dapat kamu isi dengan konten aplikasi.
-      body: const Center(
-        child: Text('Hello world!'),
-      ),
+      body: const Center(child: Text('Hello world!')),
 
       /// Parameter [floatingActionButton] akan menambahkan widget pada bagian
       /// kanan bawah. Biasanya parameter ini berisi widget [FloatingActionButton].

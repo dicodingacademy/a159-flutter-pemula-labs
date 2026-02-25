@@ -6,7 +6,7 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.17.6 <3.0.0"
+  sdk: ">=3.10.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -18,7 +18,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.0
+  flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true
@@ -26,4 +26,14 @@ flutter:
   fonts:
     - family: Oswald
       fonts:
-        - asset: fonts/Oswald/Oswald-Regular.ttf
+        - asset: assets/fonts/Oswald-ExtraLight.ttf
+          weight: 100
+        - asset: assets/fonts/Oswald-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Oswald-Regular.ttf
+        - asset: assets/fonts/Oswald-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Oswald-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Oswald-Bold.ttf
+          weight: 700

@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 
 class RadioWidget extends StatefulWidget {
-  const RadioWidget({Key? key}) : super(key: key);
+  const RadioWidget({super.key});
 
   @override
   State<RadioWidget> createState() => _RadioWidgetState();
@@ -13,48 +12,30 @@ class _RadioWidgetState extends State<RadioWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ListTile(
-          leading: Radio<String>(
-            value: 'Dart',
-            groupValue: language,
-            onChanged: (String? value) {
-              setState(() {
-                language = value;
-                showSnackbar();
-              });
-            },
+    return RadioGroup<String>(
+      groupValue: language,
+      onChanged: (String? value) {
+        setState(() {
+          language = value;
+          showSnackbar();
+        });
+      },
+      child: const Column(
+        children: [
+          ListTile(
+            leading: Radio<String>(value: 'Dart'),
+            title: Text('Dart'),
           ),
-          title: const Text('Dart'),
-        ),
-        ListTile(
-          leading: Radio<String>(
-            value: 'Kotlin',
-            groupValue: language,
-            onChanged: (String? value) {
-              setState(() {
-                language = value;
-                showSnackbar();
-              });
-            },
+          ListTile(
+            leading: Radio<String>(value: 'Kotlin'),
+            title: Text('Kotlin'),
           ),
-          title: const Text('Kotlin'),
-        ),
-        ListTile(
-          leading: Radio<String>(
-            value: 'Swift',
-            groupValue: language,
-            onChanged: (String? value) {
-              setState(() {
-                language = value;
-                showSnackbar();
-              });
-            },
+          ListTile(
+            leading: Radio<String>(value: 'Swift'),
+            title: Text('Swift'),
           ),
-          title: const Text('Swift'),
-        ),
-      ],
+        ],
+      ),
     );
   }
 

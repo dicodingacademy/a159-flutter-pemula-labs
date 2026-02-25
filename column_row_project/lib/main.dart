@@ -1,5 +1,4 @@
 import 'package:column_row_project/widget/column_widget.dart';
-import 'package:column_row_project/widget/row_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -7,14 +6,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
 
       /// Kamu bisa ganti widget-nya sesuai keinginan.

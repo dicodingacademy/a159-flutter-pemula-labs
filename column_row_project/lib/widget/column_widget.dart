@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 
 class ColumnWidget extends StatelessWidget {
-  const ColumnWidget({Key? key}) : super(key: key);
+  const ColumnWidget({super.key});
 
   final textStyle = const TextStyle(fontSize: 16);
   final listIcon = const <Widget>[
@@ -14,11 +13,9 @@ class ColumnWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('First Screen'),
-      ),
-      body: Column(
-        children: const <Widget>[
+      appBar: AppBar(title: const Text('First Screen')),
+      body: const Column(
+        children: <Widget>[
           Text(
             'Sebuah Judul',
             style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),

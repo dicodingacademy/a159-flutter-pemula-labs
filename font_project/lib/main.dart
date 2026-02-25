@@ -5,14 +5,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
 
         /// Penambahan parameter [fontFamily] pada [ThemeData] akan mengubah
         /// font-family seluruh teks yang ada di dalam aplikasi.
@@ -24,13 +24,14 @@ class MyApp extends StatelessWidget {
 }
 
 class FirstScreen extends StatelessWidget {
-  const FirstScreen({Key? key}) : super(key: key);
+  const FirstScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('First Screen'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: const Center(
         child: Text(

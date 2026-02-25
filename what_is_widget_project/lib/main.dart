@@ -7,7 +7,7 @@ void main() {
 
 /// Kelas [MyApp] menjadi kelas utama saat menjalankan aplikasi
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,16 +19,14 @@ class MyApp extends StatelessWidget {
 
       /// Tema aplikasi Flutter dideklarasikan pada parameter [theme]
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
 
       /// Parameter [home] adalah rute pertama yang akan dijalankan,
       /// sedangkan widget [Scaffold] adalah tampilan dasar Material Design.
       home: Scaffold(
         /// Parameter [appBar] untuk menampilkan App Bar pada bagian atas [Scaffold].
-        appBar: AppBar(
-          title: const Text('Hello, world!'),
-        ),
+        appBar: AppBar(title: const Text('Hello, world!')),
 
         /// Parameter [body] untuk menampilkan konten utama pada badan [Scaffold].
         /// Kamu bisa mengubah isi konten aplikasi pada parameter ini.

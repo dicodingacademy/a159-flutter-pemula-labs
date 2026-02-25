@@ -5,14 +5,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: const FirstScreen(),
     );
@@ -20,14 +20,12 @@ class MyApp extends StatelessWidget {
 }
 
 class FirstScreen extends StatelessWidget {
-  const FirstScreen({Key? key}) : super(key: key);
+  const FirstScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('First Screen'),
-      ),
+      appBar: AppBar(title: const Text('First Screen')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -38,11 +36,7 @@ class FirstScreen extends StatelessWidget {
               height: 200,
             ),
             const SizedBox(height: 30),
-            Image.asset(
-              "images/android.png",
-              width: 200,
-              height: 200,
-            ),
+            Image.asset("assets/images/android.png", width: 200, height: 200),
           ],
         ),
       ),

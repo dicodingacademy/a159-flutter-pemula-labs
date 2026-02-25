@@ -1,13 +1,12 @@
-
 import 'package:flutter/material.dart';
 
 class MediaQueryPage extends StatelessWidget {
-  const MediaQueryPage({Key? key}) : super(key: key);
+  const MediaQueryPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
-    Orientation orientation = MediaQuery.of(context).orientation;
+    Size screenSize = MediaQuery.sizeOf(context);
+    Orientation orientation = MediaQuery.orientationOf(context);
 
     return Scaffold(
       backgroundColor: Colors.blueGrey,

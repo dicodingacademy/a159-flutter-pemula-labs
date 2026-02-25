@@ -10,14 +10,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: const FirstScreen(),
     );
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
 }
 
 class FirstScreen extends StatefulWidget {
-  const FirstScreen({Key? key}) : super(key: key);
+  const FirstScreen({super.key});
 
   @override
   State<FirstScreen> createState() => _FirstScreenState();
@@ -37,20 +37,18 @@ class _FirstScreenState extends State<FirstScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('First Screen'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const <Widget>[
+          spacing: 20,
+          children: <Widget>[
             TextFieldWidget(),
-            SizedBox(height: 20),
             SwitchWidget(),
-            SizedBox(height: 20),
             RadioWidget(),
-            SizedBox(height: 20),
             CheckboxWidget(),
-            SizedBox(height: 20),
           ],
         ),
       ),

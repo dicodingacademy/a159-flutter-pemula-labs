@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TextFieldWidget extends StatefulWidget {
-  const TextFieldWidget({Key? key}) : super(key: key);
+  const TextFieldWidget({super.key});
 
   @override
   State<TextFieldWidget> createState() => _TextFieldWidgetState();
@@ -9,7 +9,6 @@ class TextFieldWidget extends StatefulWidget {
 
 class _TextFieldWidgetState extends State<TextFieldWidget> {
   final TextEditingController _controller = TextEditingController();
-  String? _name = '';
 
   @override
   void dispose() {
@@ -23,12 +22,14 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
       children: [
         TextField(
           controller: _controller,
+          keyboardType: TextInputType.text,
+          obscureText: false,
           decoration: const InputDecoration(
             hintText: 'Write your name here...',
             labelText: 'Your Name',
           ),
           onChanged: (String value) {
-            print("Updated : $value");
+            debugPrint("Updated : $value");
           },
         ),
         const SizedBox(height: 20),
@@ -38,13 +39,11 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
             showDialog(
               context: context,
               builder: (context) {
-                return AlertDialog(
-                  content: Text('Hello, ${_controller.text}'),
-                );
+                return AlertDialog(content: Text('Hello, ${_controller.text}'));
               },
             );
           },
-        )
+        ),
       ],
     );
   }
